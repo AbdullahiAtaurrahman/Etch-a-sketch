@@ -21,13 +21,49 @@
 // },0)
 
 const container = document.querySelector('.container')
+const btn = document.querySelector('.btn')
 
-for (let i = 0; i <= 16; i++) {
-    let div = document.createElement('div')
-    div.classList.add('square-grid')
-    container.appendChild(div)
+
+// for (let i = 0; i <= 16; i++) {
+//     let div = document.createElement('div')
+//     div.classList.add('square-grid')
+//     container.appendChild(div)
+
+//     div.addEventListener('mouseover', ()=>{
+//         // div.classList.add('redBG')
+//         div.style.backgroundColor = 'red'
+//     })
+//     div.addEventListener('mouseout',()=>{
+//         div.style.background = 'black'
+//     })
+// }
+
+function createDivs() {
+    for (let i = 0; i <= 16; i++) {
+        let div = document.createElement('div')
+        div.classList.add('square-grid')
+        container.appendChild(div)
+    
+        div.addEventListener('mouseover', ()=>{
+            // div.classList.add('redBG')
+            div.style.backgroundColor = 'red'
+        })
+        div.addEventListener('mouseout',()=>{
+            div.style.background = 'black'
+        })
+    }
 }
 
+document.addEventListener('DOMContentLoaded', createDivs)
+
+btn.addEventListener('click', ()=> {
+    let newSize = prompt('Squares size? ')
+    console.log(newSize);
+    container.innerHTML = ''
+    let newSquareGrid = HTMLAllCollection.createElement('span')
+    newSquareGrid.classList.add('newSquareDrid')
+    container.appendChild(newSquareGrid)
+})
 
 
 
