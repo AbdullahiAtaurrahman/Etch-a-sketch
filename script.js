@@ -1,11 +1,10 @@
 const container = document.querySelector('.container')
-let containerWidth = container.offsetWidth
+const btn =  document.querySelector('.btn')
 
-console.log(containerWidth);
-
-function createSquares(numberOfSquares) {
+function createSquares(noOfC) {
     
-    let noOfC = numberOfSquares
+    container.innerHTML = '';
+
     let squareSize = 960/noOfC
     
     for (let i = 0; i < noOfC * noOfC; i++) {
@@ -16,18 +15,28 @@ function createSquares(numberOfSquares) {
         container.appendChild(span)   
         
         span.addEventListener('mouseover',()=>{
-            span.style.background = ' blue'
+            span.style.background = 'grey'
         })
 
         span.addEventListener('mouseout',()=>{
-            span.style.background = ' white'
-        })
-
+            span.style.background = 'lightblue';
+        })      
     }
 }
 
+btn.addEventListener('click', ()=>{
+    let newGrid =  parseInt(prompt('Set number of grids: '))
+    
+    if (newGrid <=99 && newGrid >=1) {
+        createSquares(newGrid)        
+    } else {
+        alert('Enter a number between 1 and 100')   
+    }
+
+})
 
 createSquares(16)
+
 // console.log(document.body.offsetWidth);
 
 
