@@ -1,8 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
-body{
+body {
     font-family: 'roboto', 'arial', 'sans-serif';
-    /* height: 100vh; */
     width: 100vw;
     margin: 0;
     padding: 0;
@@ -10,10 +9,12 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: aliceblue;
+    background-color: rgb(75, 103, 128);
 }
 
-.container{
+/* .container {
+
+
     display: flex;
     flex-wrap: wrap;
     width: 960px;
@@ -23,18 +24,35 @@ body{
     background-color: #fff;
 }
 
-.box{
+.box {
     box-sizing: border-box;
     border: 1px dotted black;
 }
 
-.btn{
+.btn {
     padding: 12px;
     background-color: rgb(45, 192, 45);
     margin: 24px;
+    cursor: pointer;
+    border-radius: 6px;
+} */
+
+.btn {
+    font-size: 23px;
+    padding: 8px;
+    background-color: rgb(12, 12, 26);
+    color: white;
+    border-radius: 6px;
+    margin: 16px;
 }
 
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 640px;
+    margin: 5% auto;
+}
 
-
-
-
+.grid {
+    border: 1px solid black;
+}
